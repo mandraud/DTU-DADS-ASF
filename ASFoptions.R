@@ -115,9 +115,12 @@ DistList=list(                               ## a list that includes the probabi
   )                                          ## the lower infectivity of ASF as carried out by Nigsch et al., 2013.
   , 
 probList=list(   ## Default distributions
-  DistCat=c(0,1,3,10,15,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,300), ## distance categories in km
-  distcat=c(0,1,3,10,15,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,300)
-
+  DistCat=c(0,1,3,10,15,20,30,
+            seq(40,250,10),300,350,
+            500,1000,1500,2000,2500,3000), ## distance categories in km
+  distcat=c(0,1,3,10,15,20,30,
+            seq(40,250,10),300,350,
+            500,1000,1500,2000,2500,3000)
   ),
                  
                  newInfFunctions=c(     # Vector of functions used to make new infections (including parameters).
